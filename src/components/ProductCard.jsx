@@ -1,6 +1,12 @@
+import { motion } from 'framer-motion'
+
 export default function ProductCard({ product, onAdd }) {
   return (
-    <div className="group bg-white rounded-xl border border-pink-200/60 overflow-hidden shadow-sm hover:shadow-md transition">
+    <motion.div
+      className="group bg-white rounded-xl border border-pink-200/60 overflow-hidden shadow-sm hover:shadow-md transition"
+      whileHover={{ y: -4 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+    >
       <div className="aspect-[4/3] overflow-hidden">
         <img src={product.image_url} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
       </div>
@@ -14,6 +20,6 @@ export default function ProductCard({ product, onAdd }) {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
