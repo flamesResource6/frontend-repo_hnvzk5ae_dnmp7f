@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Features from './components/Features'
 import Catalog from './components/Catalog'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <div className="min-h-screen bg-pink-50">
       <Navbar cartCount={cartCount} />
       <Hero />
+      <Features />
       <Catalog onAdd={handleAdd} />
 
       <footer id="about" className="mt-16 border-t border-pink-200/60 bg-white/70">
